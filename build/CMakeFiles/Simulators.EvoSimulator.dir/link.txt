@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSimulators.EvoSimulator.a  CMakeFiles/Simulators.EvoSimulator.dir/src/Simulators/EvoSimulator/Task.cpp.o
+/usr/bin/ranlib libSimulators.EvoSimulator.a

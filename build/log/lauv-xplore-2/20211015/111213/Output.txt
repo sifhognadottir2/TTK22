@@ -1,0 +1,8 @@
+[2021/10/15 11:12:13] - WRN [Supervisors.Vehicle] >> now in 'SERVICE' mode
+[2021/10/15 11:20:24] - WRN [Plan.DB] >> storing plan 'follow_neptus' issued through a PlanControl request
+[2021/10/15 11:20:24] - MSG [Plan.Engine] >> request -- Start Plan (follow_neptus)
+[2021/10/15 11:20:24] - MSG [Plan.Engine] >> plan initializing: follow_neptus
+[2021/10/15 11:20:24] - MSG [Plan.Engine] >> 1: executing maneuver
+[2021/10/15 11:20:24] - MSG [Plan.Engine] >> reply -- Start Plan (follow_neptus) -- 1: executing maneuver
+[2021/10/15 11:20:24] - MSG [Transports.Logging] >> log stopped '20211015/111213'
+[2021/10/15 11:20:24] - MSG [Transports.Logging] >> log started '20211015/112024_follow_neptus'

@@ -1,0 +1,17 @@
+[2021/10/15 11:25:28] - MSG [Monitors.Entities] >> Path Control : Boot -> Normal | idle
+[2021/10/15 11:25:28] - MSG [Transports.Discovery] >> new node within range 'ccu-sif-17-102' / 20838 / 10.22.227.122
+[2021/10/15 11:25:29] - MSG [Monitors.Entities] >> GPS : Boot -> Normal | active
+[2021/10/15 11:25:29] - MSG [Monitors.Entities] >> Attitude : Boot -> Normal | idle
+[2021/10/15 11:25:29] - MSG [Monitors.Entities] >> Operational Limits : Boot -> Normal | active
+[2021/10/15 11:25:33] - MSG [Monitors.Entities] >> Navigation : Boot -> Normal | active
+[2021/10/15 11:25:34] - MSG [Supervisors.Vehicle] >> entity errors cleared
+[2021/10/15 11:25:34] - WRN [Supervisors.Vehicle] >> now in 'SERVICE' mode
+[2021/10/15 11:25:34] - MSG [Plan.Engine] >> vehicle ready
+[2021/10/15 11:25:43] - MSG [Transports.UDP] >> activating transmission to node 'ccu-sif-17-102'
+[2021/10/15 11:25:56] - WRN [Plan.DB] >> storing plan 'cmd-lauv-xplore-1' issued through a PlanControl request
+[2021/10/15 11:25:56] - MSG [Plan.Engine] >> request -- Start Plan (cmd-lauv-xplore-1)
+[2021/10/15 11:25:56] - MSG [Plan.Engine] >> plan initializing: cmd-lauv-xplore-1
+[2021/10/15 11:25:56] - MSG [Plan.Engine] >> 1: executing maneuver
+[2021/10/15 11:25:56] - MSG [Transports.Logging] >> log stopped '20211015/112528'
+[2021/10/15 11:25:56] - MSG [Plan.Engine] >> reply -- Start Plan (cmd-lauv-xplore-1) -- 1: executing maneuver
+[2021/10/15 11:25:56] - MSG [Transports.Logging] >> log started '20211015/112556_cmd-lauv-xplore-1'

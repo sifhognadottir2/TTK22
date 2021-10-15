@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMonitors.LifeCycle.a  CMakeFiles/Monitors.LifeCycle.dir/src/Monitors/LifeCycle/Task.cpp.o
+/usr/bin/ranlib libMonitors.LifeCycle.a
