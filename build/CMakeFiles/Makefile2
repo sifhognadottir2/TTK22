@@ -63,7 +63,6 @@ all: CMakeFiles/Vision.UAVCamera.dir/all
 all: CMakeFiles/Vision.PointGrey.dir/all
 all: CMakeFiles/Vision.PhotoTrigger.dir/all
 all: CMakeFiles/Vision.DFK51BG02H.dir/all
-all: CMakeFiles/UserInterfaces.MantaPanel.dir/all
 all: CMakeFiles/UserInterfaces.Buttons.dir/all
 all: CMakeFiles/Transports.UDP.dir/all
 all: CMakeFiles/Transports.TCPOnDemand.dir/all
@@ -100,12 +99,19 @@ all: CMakeFiles/Simulators.Leaks.dir/all
 all: CMakeFiles/Transports.UAN.dir/all
 all: CMakeFiles/Simulators.LBL.dir/all
 all: CMakeFiles/Simulators.Iridium.dir/all
+all: CMakeFiles/Simulators.IMU.dir/all
 all: CMakeFiles/Monitors.FuelLevel.dir/all
 all: CMakeFiles/Actuators.SCRTv4.dir/all
 all: CMakeFiles/Monitors.Collisions.dir/all
 all: CMakeFiles/Sensors.MiniSVS.dir/all
+all: CMakeFiles/UserInterfaces.MantaPanel.dir/all
+all: CMakeFiles/Monitors.Activatable.dir/all
+all: CMakeFiles/Maneuver.CompassCalibration.dir/all
 all: CMakeFiles/Plan.Engine.dir/all
 all: CMakeFiles/Maneuver.FollowSystem.dir/all
+all: CMakeFiles/UserInterfaces.LCD.dir/all
+all: CMakeFiles/Transports.HTTP.dir/all
+all: CMakeFiles/Power.OPCON.dir/all
 all: CMakeFiles/Simulators.UAV.dir/all
 all: CMakeFiles/Maneuver.Multiplexer.dir/all
 all: CMakeFiles/Maneuver.FollowReference.AUV.dir/all
@@ -140,10 +146,6 @@ all: CMakeFiles/Sensors.AIM104MultiIO.dir/all
 all: CMakeFiles/Monitors.Clock.dir/all
 all: CMakeFiles/Actuators.SingleSIMCT01.dir/all
 all: CMakeFiles/Sensors.MetrecX.dir/all
-all: CMakeFiles/Maneuver.CompassCalibration.dir/all
-all: CMakeFiles/UserInterfaces.LCD.dir/all
-all: CMakeFiles/Transports.HTTP.dir/all
-all: CMakeFiles/Power.OPCON.dir/all
 all: CMakeFiles/Actuators.MCD4R.dir/all
 all: CMakeFiles/Sensors.EmulatedGPS.dir/all
 all: CMakeFiles/Control.UAV.LOS.dir/all
@@ -173,7 +175,6 @@ all: CMakeFiles/dune-uctk.dir/all
 all: CMakeFiles/Maneuver.FollowTrajectory.dir/all
 all: CMakeFiles/Maneuver.CoverArea.dir/all
 all: CMakeFiles/Sensors.Microstrain3DMGX3.dir/all
-all: CMakeFiles/Simulators.IMU.dir/all
 all: CMakeFiles/Supervisors.Power.dir/all
 all: CMakeFiles/Actuators.SIMCT01.dir/all
 all: CMakeFiles/Control.AUV.Allocator.dir/all
@@ -284,7 +285,6 @@ clean: CMakeFiles/Vision.PointGrey.dir/clean
 clean: CMakeFiles/Vision.PhotoTrigger.dir/clean
 clean: CMakeFiles/ExperimentalStart.dir/clean
 clean: CMakeFiles/Vision.DFK51BG02H.dir/clean
-clean: CMakeFiles/UserInterfaces.MantaPanel.dir/clean
 clean: CMakeFiles/UserInterfaces.Buttons.dir/clean
 clean: CMakeFiles/Transports.UDP.dir/clean
 clean: CMakeFiles/Transports.TCPOnDemand.dir/clean
@@ -326,13 +326,21 @@ clean: CMakeFiles/Simulators.Leaks.dir/clean
 clean: CMakeFiles/Transports.UAN.dir/clean
 clean: CMakeFiles/Simulators.LBL.dir/clean
 clean: CMakeFiles/Simulators.Iridium.dir/clean
+clean: CMakeFiles/Simulators.IMU.dir/clean
 clean: CMakeFiles/Monitors.FuelLevel.dir/clean
 clean: CMakeFiles/Actuators.SCRTv4.dir/clean
 clean: CMakeFiles/Monitors.Collisions.dir/clean
 clean: CMakeFiles/Sensors.MiniSVS.dir/clean
+clean: CMakeFiles/UserInterfaces.MantaPanel.dir/clean
+clean: CMakeFiles/Monitors.Activatable.dir/clean
+clean: CMakeFiles/Maneuver.CompassCalibration.dir/clean
 clean: CMakeFiles/imc_download.dir/clean
 clean: CMakeFiles/Plan.Engine.dir/clean
 clean: CMakeFiles/Maneuver.FollowSystem.dir/clean
+clean: CMakeFiles/UserInterfaces.LCD.dir/clean
+clean: CMakeFiles/Transports.HTTP.dir/clean
+clean: CMakeFiles/Power.OPCON.dir/clean
+clean: CMakeFiles/i18n_texts.dir/clean
 clean: CMakeFiles/Simulators.UAV.dir/clean
 clean: CMakeFiles/Maneuver.Multiplexer.dir/clean
 clean: CMakeFiles/Maneuver.FollowReference.AUV.dir/clean
@@ -370,11 +378,6 @@ clean: CMakeFiles/Sensors.AIM104MultiIO.dir/clean
 clean: CMakeFiles/Monitors.Clock.dir/clean
 clean: CMakeFiles/Actuators.SingleSIMCT01.dir/clean
 clean: CMakeFiles/Sensors.MetrecX.dir/clean
-clean: CMakeFiles/Maneuver.CompassCalibration.dir/clean
-clean: CMakeFiles/UserInterfaces.LCD.dir/clean
-clean: CMakeFiles/Transports.HTTP.dir/clean
-clean: CMakeFiles/i18n_texts.dir/clean
-clean: CMakeFiles/Power.OPCON.dir/clean
 clean: CMakeFiles/dune-version.dir/clean
 clean: CMakeFiles/Actuators.MCD4R.dir/clean
 clean: CMakeFiles/ContinuousStart.dir/clean
@@ -415,7 +418,6 @@ clean: CMakeFiles/Maneuver.FollowTrajectory.dir/clean
 clean: CMakeFiles/Maneuver.CoverArea.dir/clean
 clean: CMakeFiles/Nightly.dir/clean
 clean: CMakeFiles/Sensors.Microstrain3DMGX3.dir/clean
-clean: CMakeFiles/Simulators.IMU.dir/clean
 clean: CMakeFiles/ExperimentalCoverage.dir/clean
 clean: CMakeFiles/Supervisors.Power.dir/clean
 clean: CMakeFiles/Actuators.SIMCT01.dir/clean
@@ -1178,7 +1180,6 @@ CMakeFiles/dune.dir/all: CMakeFiles/Vision.UAVCamera.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Vision.PointGrey.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Vision.PhotoTrigger.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Vision.DFK51BG02H.dir/all
-CMakeFiles/dune.dir/all: CMakeFiles/UserInterfaces.MantaPanel.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/UserInterfaces.Buttons.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Transports.UDP.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Transports.TCPOnDemand.dir/all
@@ -1214,12 +1215,19 @@ CMakeFiles/dune.dir/all: CMakeFiles/Simulators.Leaks.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Transports.UAN.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Simulators.LBL.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Simulators.Iridium.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/Simulators.IMU.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Monitors.FuelLevel.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Actuators.SCRTv4.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Monitors.Collisions.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Sensors.MiniSVS.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/UserInterfaces.MantaPanel.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/Monitors.Activatable.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.CompassCalibration.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Plan.Engine.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.FollowSystem.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/UserInterfaces.LCD.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/Transports.HTTP.dir/all
+CMakeFiles/dune.dir/all: CMakeFiles/Power.OPCON.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Simulators.UAV.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.Multiplexer.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.FollowReference.AUV.dir/all
@@ -1253,10 +1261,6 @@ CMakeFiles/dune.dir/all: CMakeFiles/Sensors.AIM104MultiIO.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Monitors.Clock.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Actuators.SingleSIMCT01.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Sensors.MetrecX.dir/all
-CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.CompassCalibration.dir/all
-CMakeFiles/dune.dir/all: CMakeFiles/UserInterfaces.LCD.dir/all
-CMakeFiles/dune.dir/all: CMakeFiles/Transports.HTTP.dir/all
-CMakeFiles/dune.dir/all: CMakeFiles/Power.OPCON.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Actuators.MCD4R.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Sensors.EmulatedGPS.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Control.UAV.LOS.dir/all
@@ -1284,7 +1288,6 @@ CMakeFiles/dune.dir/all: CMakeFiles/Actuators.PWM.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.FollowTrajectory.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Maneuver.CoverArea.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Sensors.Microstrain3DMGX3.dir/all
-CMakeFiles/dune.dir/all: CMakeFiles/Simulators.IMU.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Supervisors.Power.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Actuators.SIMCT01.dir/all
 CMakeFiles/dune.dir/all: CMakeFiles/Control.AUV.Allocator.dir/all
@@ -1434,12 +1437,12 @@ CMakeFiles/Vision.PointGrey.dir/clean:
 CMakeFiles/Vision.PhotoTrigger.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Vision.PhotoTrigger.dir/build.make CMakeFiles/Vision.PhotoTrigger.dir/depend
 	$(MAKE) -f CMakeFiles/Vision.PhotoTrigger.dir/build.make CMakeFiles/Vision.PhotoTrigger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=57 "Built target Vision.PhotoTrigger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Vision.PhotoTrigger"
 .PHONY : CMakeFiles/Vision.PhotoTrigger.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Vision.PhotoTrigger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Vision.PhotoTrigger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Vision.PhotoTrigger.dir/rule
@@ -1507,33 +1510,6 @@ Vision.DFK51BG02H: CMakeFiles/Vision.DFK51BG02H.dir/rule
 CMakeFiles/Vision.DFK51BG02H.dir/clean:
 	$(MAKE) -f CMakeFiles/Vision.DFK51BG02H.dir/build.make CMakeFiles/Vision.DFK51BG02H.dir/clean
 .PHONY : CMakeFiles/Vision.DFK51BG02H.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/UserInterfaces.MantaPanel.dir
-
-# All Build rule for target.
-CMakeFiles/UserInterfaces.MantaPanel.dir/all: CMakeFiles/dune-core.dir/all
-	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/depend
-	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=56 "Built target UserInterfaces.MantaPanel"
-.PHONY : CMakeFiles/UserInterfaces.MantaPanel.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/UserInterfaces.MantaPanel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/UserInterfaces.MantaPanel.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/UserInterfaces.MantaPanel.dir/rule
-
-# Convenience name for target.
-UserInterfaces.MantaPanel: CMakeFiles/UserInterfaces.MantaPanel.dir/rule
-
-.PHONY : UserInterfaces.MantaPanel
-
-# clean rule for target.
-CMakeFiles/UserInterfaces.MantaPanel.dir/clean:
-	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/clean
-.PHONY : CMakeFiles/UserInterfaces.MantaPanel.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/UserInterfaces.Buttons.dir
@@ -1677,12 +1653,12 @@ CMakeFiles/NightlyTest.dir/clean:
 CMakeFiles/Transports.SerialOverTCP.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.SerialOverTCP.dir/build.make CMakeFiles/Transports.SerialOverTCP.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.SerialOverTCP.dir/build.make CMakeFiles/Transports.SerialOverTCP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=53 "Built target Transports.SerialOverTCP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.SerialOverTCP"
 .PHONY : CMakeFiles/Transports.SerialOverTCP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.SerialOverTCP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.SerialOverTCP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.SerialOverTCP.dir/rule
@@ -1731,12 +1707,12 @@ CMakeFiles/Transports.TCP.Client.dir/clean:
 CMakeFiles/Transports.Serial.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.Serial.dir/build.make CMakeFiles/Transports.Serial.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.Serial.dir/build.make CMakeFiles/Transports.Serial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.Serial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=53 "Built target Transports.Serial"
 .PHONY : CMakeFiles/Transports.Serial.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.Serial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.Serial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.Serial.dir/rule
@@ -1920,12 +1896,12 @@ CMakeFiles/Transports.Discovery.dir/clean:
 CMakeFiles/Transports.CommManager.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.CommManager.dir/build.make CMakeFiles/Transports.CommManager.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.CommManager.dir/build.make CMakeFiles/Transports.CommManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.CommManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=47 "Built target Transports.CommManager"
 .PHONY : CMakeFiles/Transports.CommManager.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.CommManager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.CommManager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.CommManager.dir/rule
@@ -2136,12 +2112,12 @@ CMakeFiles/Supervisors.PowerManager.dir/clean:
 CMakeFiles/Supervisors.Entities.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Supervisors.Entities.dir/build.make CMakeFiles/Supervisors.Entities.dir/depend
 	$(MAKE) -f CMakeFiles/Supervisors.Entities.dir/build.make CMakeFiles/Supervisors.Entities.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=44 "Built target Supervisors.Entities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Supervisors.Entities"
 .PHONY : CMakeFiles/Supervisors.Entities.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Supervisors.Entities.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Supervisors.Entities.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Supervisors.Entities.dir/rule
@@ -2190,12 +2166,12 @@ CMakeFiles/usbl_evaluation.dir/clean:
 CMakeFiles/Transports.GSM.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.GSM.dir/build.make CMakeFiles/Transports.GSM.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.GSM.dir/build.make CMakeFiles/Transports.GSM.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.GSM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=49 "Built target Transports.GSM"
 .PHONY : CMakeFiles/Transports.GSM.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.GSM.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.GSM.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.GSM.dir/rule
@@ -2271,12 +2247,12 @@ CMakeFiles/NightlyCoverage.dir/clean:
 CMakeFiles/Supervisors.AUV.Assist.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Supervisors.AUV.Assist.dir/build.make CMakeFiles/Supervisors.AUV.Assist.dir/depend
 	$(MAKE) -f CMakeFiles/Supervisors.AUV.Assist.dir/build.make CMakeFiles/Supervisors.AUV.Assist.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=43 "Built target Supervisors.AUV.Assist"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Supervisors.AUV.Assist"
 .PHONY : CMakeFiles/Supervisors.AUV.Assist.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Supervisors.AUV.Assist.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Supervisors.AUV.Assist.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Supervisors.AUV.Assist.dir/rule
@@ -2352,12 +2328,12 @@ CMakeFiles/Simulators.UAVAutopilot.dir/clean:
 CMakeFiles/Simulators.Target.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Simulators.Target.dir/build.make CMakeFiles/Simulators.Target.dir/depend
 	$(MAKE) -f CMakeFiles/Simulators.Target.dir/build.make CMakeFiles/Simulators.Target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=40 "Built target Simulators.Target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Simulators.Target"
 .PHONY : CMakeFiles/Simulators.Target.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Simulators.Target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.Target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Simulators.Target.dir/rule
@@ -2379,12 +2355,12 @@ CMakeFiles/Simulators.Target.dir/clean:
 CMakeFiles/Simulators.StreamVelocity.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Simulators.StreamVelocity.dir/build.make CMakeFiles/Simulators.StreamVelocity.dir/depend
 	$(MAKE) -f CMakeFiles/Simulators.StreamVelocity.dir/build.make CMakeFiles/Simulators.StreamVelocity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Simulators.StreamVelocity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=40 "Built target Simulators.StreamVelocity"
 .PHONY : CMakeFiles/Simulators.StreamVelocity.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Simulators.StreamVelocity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.StreamVelocity.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Simulators.StreamVelocity.dir/rule
@@ -2406,12 +2382,12 @@ CMakeFiles/Simulators.StreamVelocity.dir/clean:
 CMakeFiles/Simulators.Servos.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Simulators.Servos.dir/build.make CMakeFiles/Simulators.Servos.dir/depend
 	$(MAKE) -f CMakeFiles/Simulators.Servos.dir/build.make CMakeFiles/Simulators.Servos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=39 "Built target Simulators.Servos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Simulators.Servos"
 .PHONY : CMakeFiles/Simulators.Servos.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Simulators.Servos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.Servos.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Simulators.Servos.dir/rule
@@ -2460,12 +2436,12 @@ CMakeFiles/Transports.Replay.dir/clean:
 CMakeFiles/Supervisors.Delegator.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Supervisors.Delegator.dir/build.make CMakeFiles/Supervisors.Delegator.dir/depend
 	$(MAKE) -f CMakeFiles/Supervisors.Delegator.dir/build.make CMakeFiles/Supervisors.Delegator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Supervisors.Delegator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=44 "Built target Supervisors.Delegator"
 .PHONY : CMakeFiles/Supervisors.Delegator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Supervisors.Delegator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Supervisors.Delegator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Supervisors.Delegator.dir/rule
@@ -2487,12 +2463,12 @@ CMakeFiles/Supervisors.Delegator.dir/clean:
 CMakeFiles/Simulators.Motor.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Simulators.Motor.dir/build.make CMakeFiles/Simulators.Motor.dir/depend
 	$(MAKE) -f CMakeFiles/Simulators.Motor.dir/build.make CMakeFiles/Simulators.Motor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Simulators.Motor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=39 "Built target Simulators.Motor"
 .PHONY : CMakeFiles/Simulators.Motor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Simulators.Motor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.Motor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Simulators.Motor.dir/rule
@@ -2643,6 +2619,33 @@ CMakeFiles/Simulators.Iridium.dir/clean:
 .PHONY : CMakeFiles/Simulators.Iridium.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/Simulators.IMU.dir
+
+# All Build rule for target.
+CMakeFiles/Simulators.IMU.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/depend
+	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Simulators.IMU"
+.PHONY : CMakeFiles/Simulators.IMU.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Simulators.IMU.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.IMU.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/Simulators.IMU.dir/rule
+
+# Convenience name for target.
+Simulators.IMU: CMakeFiles/Simulators.IMU.dir/rule
+
+.PHONY : Simulators.IMU
+
+# clean rule for target.
+CMakeFiles/Simulators.IMU.dir/clean:
+	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/clean
+.PHONY : CMakeFiles/Simulators.IMU.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Monitors.FuelLevel.dir
 
 # All Build rule for target.
@@ -2730,12 +2733,12 @@ CMakeFiles/Monitors.Collisions.dir/clean:
 CMakeFiles/Sensors.MiniSVS.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.MiniSVS.dir/build.make CMakeFiles/Sensors.MiniSVS.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.MiniSVS.dir/build.make CMakeFiles/Sensors.MiniSVS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.MiniSVS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=31 "Built target Sensors.MiniSVS"
 .PHONY : CMakeFiles/Sensors.MiniSVS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.MiniSVS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.MiniSVS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.MiniSVS.dir/rule
@@ -2749,6 +2752,87 @@ Sensors.MiniSVS: CMakeFiles/Sensors.MiniSVS.dir/rule
 CMakeFiles/Sensors.MiniSVS.dir/clean:
 	$(MAKE) -f CMakeFiles/Sensors.MiniSVS.dir/build.make CMakeFiles/Sensors.MiniSVS.dir/clean
 .PHONY : CMakeFiles/Sensors.MiniSVS.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/UserInterfaces.MantaPanel.dir
+
+# All Build rule for target.
+CMakeFiles/UserInterfaces.MantaPanel.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/depend
+	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=56 "Built target UserInterfaces.MantaPanel"
+.PHONY : CMakeFiles/UserInterfaces.MantaPanel.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/UserInterfaces.MantaPanel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/UserInterfaces.MantaPanel.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/UserInterfaces.MantaPanel.dir/rule
+
+# Convenience name for target.
+UserInterfaces.MantaPanel: CMakeFiles/UserInterfaces.MantaPanel.dir/rule
+
+.PHONY : UserInterfaces.MantaPanel
+
+# clean rule for target.
+CMakeFiles/UserInterfaces.MantaPanel.dir/clean:
+	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/clean
+.PHONY : CMakeFiles/UserInterfaces.MantaPanel.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Monitors.Activatable.dir
+
+# All Build rule for target.
+CMakeFiles/Monitors.Activatable.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/depend
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=14 "Built target Monitors.Activatable"
+.PHONY : CMakeFiles/Monitors.Activatable.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Monitors.Activatable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Monitors.Activatable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/Monitors.Activatable.dir/rule
+
+# Convenience name for target.
+Monitors.Activatable: CMakeFiles/Monitors.Activatable.dir/rule
+
+.PHONY : Monitors.Activatable
+
+# clean rule for target.
+CMakeFiles/Monitors.Activatable.dir/clean:
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/clean
+.PHONY : CMakeFiles/Monitors.Activatable.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Maneuver.CompassCalibration.dir
+
+# All Build rule for target.
+CMakeFiles/Maneuver.CompassCalibration.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/depend
+	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=11 "Built target Maneuver.CompassCalibration"
+.PHONY : CMakeFiles/Maneuver.CompassCalibration.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Maneuver.CompassCalibration.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Maneuver.CompassCalibration.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/Maneuver.CompassCalibration.dir/rule
+
+# Convenience name for target.
+Maneuver.CompassCalibration: CMakeFiles/Maneuver.CompassCalibration.dir/rule
+
+.PHONY : Maneuver.CompassCalibration
+
+# clean rule for target.
+CMakeFiles/Maneuver.CompassCalibration.dir/clean:
+	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/clean
+.PHONY : CMakeFiles/Maneuver.CompassCalibration.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/imc_download.dir
@@ -2811,12 +2895,12 @@ CMakeFiles/Plan.Engine.dir/clean:
 CMakeFiles/Maneuver.FollowSystem.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Maneuver.FollowSystem.dir/build.make CMakeFiles/Maneuver.FollowSystem.dir/depend
 	$(MAKE) -f CMakeFiles/Maneuver.FollowSystem.dir/build.make CMakeFiles/Maneuver.FollowSystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Maneuver.FollowSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=12 "Built target Maneuver.FollowSystem"
 .PHONY : CMakeFiles/Maneuver.FollowSystem.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Maneuver.FollowSystem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Maneuver.FollowSystem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Maneuver.FollowSystem.dir/rule
@@ -2830,6 +2914,114 @@ Maneuver.FollowSystem: CMakeFiles/Maneuver.FollowSystem.dir/rule
 CMakeFiles/Maneuver.FollowSystem.dir/clean:
 	$(MAKE) -f CMakeFiles/Maneuver.FollowSystem.dir/build.make CMakeFiles/Maneuver.FollowSystem.dir/clean
 .PHONY : CMakeFiles/Maneuver.FollowSystem.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/UserInterfaces.LCD.dir
+
+# All Build rule for target.
+CMakeFiles/UserInterfaces.LCD.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/depend
+	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target UserInterfaces.LCD"
+.PHONY : CMakeFiles/UserInterfaces.LCD.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/UserInterfaces.LCD.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/UserInterfaces.LCD.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/UserInterfaces.LCD.dir/rule
+
+# Convenience name for target.
+UserInterfaces.LCD: CMakeFiles/UserInterfaces.LCD.dir/rule
+
+.PHONY : UserInterfaces.LCD
+
+# clean rule for target.
+CMakeFiles/UserInterfaces.LCD.dir/clean:
+	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/clean
+.PHONY : CMakeFiles/UserInterfaces.LCD.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Transports.HTTP.dir
+
+# All Build rule for target.
+CMakeFiles/Transports.HTTP.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/depend
+	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.HTTP"
+.PHONY : CMakeFiles/Transports.HTTP.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Transports.HTTP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.HTTP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/Transports.HTTP.dir/rule
+
+# Convenience name for target.
+Transports.HTTP: CMakeFiles/Transports.HTTP.dir/rule
+
+.PHONY : Transports.HTTP
+
+# clean rule for target.
+CMakeFiles/Transports.HTTP.dir/clean:
+	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/clean
+.PHONY : CMakeFiles/Transports.HTTP.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Power.OPCON.dir
+
+# All Build rule for target.
+CMakeFiles/Power.OPCON.dir/all: CMakeFiles/dune-core.dir/all
+	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/depend
+	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.OPCON"
+.PHONY : CMakeFiles/Power.OPCON.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Power.OPCON.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.OPCON.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/Power.OPCON.dir/rule
+
+# Convenience name for target.
+Power.OPCON: CMakeFiles/Power.OPCON.dir/rule
+
+.PHONY : Power.OPCON
+
+# clean rule for target.
+CMakeFiles/Power.OPCON.dir/clean:
+	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/clean
+.PHONY : CMakeFiles/Power.OPCON.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/i18n_texts.dir
+
+# All Build rule for target.
+CMakeFiles/i18n_texts.dir/all:
+	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/depend
+	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target i18n_texts"
+.PHONY : CMakeFiles/i18n_texts.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/i18n_texts.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/i18n_texts.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
+.PHONY : CMakeFiles/i18n_texts.dir/rule
+
+# Convenience name for target.
+i18n_texts: CMakeFiles/i18n_texts.dir/rule
+
+.PHONY : i18n_texts
+
+# clean rule for target.
+CMakeFiles/i18n_texts.dir/clean:
+	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/clean
+.PHONY : CMakeFiles/i18n_texts.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Simulators.UAV.dir
@@ -2973,12 +3165,12 @@ CMakeFiles/Control.UAV.PX4.dir/clean:
 CMakeFiles/Monitors.Emergency.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Monitors.Emergency.dir/build.make CMakeFiles/Monitors.Emergency.dir/depend
 	$(MAKE) -f CMakeFiles/Monitors.Emergency.dir/build.make CMakeFiles/Monitors.Emergency.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Monitors.Emergency"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=15 "Built target Monitors.Emergency"
 .PHONY : CMakeFiles/Monitors.Emergency.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Monitors.Emergency.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Monitors.Emergency.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Monitors.Emergency.dir/rule
@@ -3081,12 +3273,12 @@ CMakeFiles/Monitors.Medium.dir/clean:
 CMakeFiles/Control.Path.VectorField.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Control.Path.VectorField.dir/build.make CMakeFiles/Control.Path.VectorField.dir/depend
 	$(MAKE) -f CMakeFiles/Control.Path.VectorField.dir/build.make CMakeFiles/Control.Path.VectorField.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Control.Path.VectorField"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=8 "Built target Control.Path.VectorField"
 .PHONY : CMakeFiles/Control.Path.VectorField.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Control.Path.VectorField.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Control.Path.VectorField.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Control.Path.VectorField.dir/rule
@@ -3108,12 +3300,12 @@ CMakeFiles/Control.Path.VectorField.dir/clean:
 CMakeFiles/Navigation.AUV.Navigation.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Navigation.AUV.Navigation.dir/build.make CMakeFiles/Navigation.AUV.Navigation.dir/depend
 	$(MAKE) -f CMakeFiles/Navigation.AUV.Navigation.dir/build.make CMakeFiles/Navigation.AUV.Navigation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Navigation.AUV.Navigation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=17 "Built target Navigation.AUV.Navigation"
 .PHONY : CMakeFiles/Navigation.AUV.Navigation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Navigation.AUV.Navigation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Navigation.AUV.Navigation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Navigation.AUV.Navigation.dir/rule
@@ -3216,12 +3408,12 @@ CMakeFiles/Maneuver.RowsCoverage.dir/clean:
 CMakeFiles/Sensors.MLBLTracker.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.MLBLTracker.dir/build.make CMakeFiles/Sensors.MLBLTracker.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.MLBLTracker.dir/build.make CMakeFiles/Sensors.MLBLTracker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=29 "Built target Sensors.MLBLTracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.MLBLTracker"
 .PHONY : CMakeFiles/Sensors.MLBLTracker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.MLBLTracker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.MLBLTracker.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.MLBLTracker.dir/rule
@@ -3513,12 +3705,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/Simulators.VSIM.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Simulators.VSIM.dir/build.make CMakeFiles/Simulators.VSIM.dir/depend
 	$(MAKE) -f CMakeFiles/Simulators.VSIM.dir/build.make CMakeFiles/Simulators.VSIM.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=42 "Built target Simulators.VSIM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=42,43 "Built target Simulators.VSIM"
 .PHONY : CMakeFiles/Simulators.VSIM.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Simulators.VSIM.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 37
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.VSIM.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Simulators.VSIM.dir/rule
@@ -3594,12 +3786,12 @@ CMakeFiles/Actuators.AMC.dir/clean:
 CMakeFiles/Transports.FTP.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.FTP.dir/build.make CMakeFiles/Transports.FTP.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.FTP.dir/build.make CMakeFiles/Transports.FTP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=48 "Built target Transports.FTP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.FTP"
 .PHONY : CMakeFiles/Transports.FTP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.FTP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.FTP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.FTP.dir/rule
@@ -3675,12 +3867,12 @@ CMakeFiles/ExperimentalTest.dir/clean:
 CMakeFiles/Autonomy.TextActions.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Autonomy.TextActions.dir/build.make CMakeFiles/Autonomy.TextActions.dir/depend
 	$(MAKE) -f CMakeFiles/Autonomy.TextActions.dir/build.make CMakeFiles/Autonomy.TextActions.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=4 "Built target Autonomy.TextActions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Autonomy.TextActions"
 .PHONY : CMakeFiles/Autonomy.TextActions.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Autonomy.TextActions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Autonomy.TextActions.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Autonomy.TextActions.dir/rule
@@ -3702,12 +3894,12 @@ CMakeFiles/Autonomy.TextActions.dir/clean:
 CMakeFiles/Sensors.MLBL.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.MLBL.dir/build.make CMakeFiles/Sensors.MLBL.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.MLBL.dir/build.make CMakeFiles/Sensors.MLBL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.MLBL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=29 "Built target Sensors.MLBL"
 .PHONY : CMakeFiles/Sensors.MLBL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.MLBL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.MLBL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.MLBL.dir/rule
@@ -3756,12 +3948,12 @@ CMakeFiles/Sensors.AIM104MultiIO.dir/clean:
 CMakeFiles/Monitors.Clock.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Monitors.Clock.dir/build.make CMakeFiles/Monitors.Clock.dir/depend
 	$(MAKE) -f CMakeFiles/Monitors.Clock.dir/build.make CMakeFiles/Monitors.Clock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=14 "Built target Monitors.Clock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Monitors.Clock"
 .PHONY : CMakeFiles/Monitors.Clock.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Monitors.Clock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Monitors.Clock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Monitors.Clock.dir/rule
@@ -3829,141 +4021,6 @@ Sensors.MetrecX: CMakeFiles/Sensors.MetrecX.dir/rule
 CMakeFiles/Sensors.MetrecX.dir/clean:
 	$(MAKE) -f CMakeFiles/Sensors.MetrecX.dir/build.make CMakeFiles/Sensors.MetrecX.dir/clean
 .PHONY : CMakeFiles/Sensors.MetrecX.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Maneuver.CompassCalibration.dir
-
-# All Build rule for target.
-CMakeFiles/Maneuver.CompassCalibration.dir/all: CMakeFiles/dune-core.dir/all
-	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/depend
-	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=11 "Built target Maneuver.CompassCalibration"
-.PHONY : CMakeFiles/Maneuver.CompassCalibration.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Maneuver.CompassCalibration.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Maneuver.CompassCalibration.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/Maneuver.CompassCalibration.dir/rule
-
-# Convenience name for target.
-Maneuver.CompassCalibration: CMakeFiles/Maneuver.CompassCalibration.dir/rule
-
-.PHONY : Maneuver.CompassCalibration
-
-# clean rule for target.
-CMakeFiles/Maneuver.CompassCalibration.dir/clean:
-	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/clean
-.PHONY : CMakeFiles/Maneuver.CompassCalibration.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/UserInterfaces.LCD.dir
-
-# All Build rule for target.
-CMakeFiles/UserInterfaces.LCD.dir/all: CMakeFiles/dune-core.dir/all
-	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/depend
-	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target UserInterfaces.LCD"
-.PHONY : CMakeFiles/UserInterfaces.LCD.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/UserInterfaces.LCD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/UserInterfaces.LCD.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/UserInterfaces.LCD.dir/rule
-
-# Convenience name for target.
-UserInterfaces.LCD: CMakeFiles/UserInterfaces.LCD.dir/rule
-
-.PHONY : UserInterfaces.LCD
-
-# clean rule for target.
-CMakeFiles/UserInterfaces.LCD.dir/clean:
-	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/clean
-.PHONY : CMakeFiles/UserInterfaces.LCD.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Transports.HTTP.dir
-
-# All Build rule for target.
-CMakeFiles/Transports.HTTP.dir/all: CMakeFiles/dune-core.dir/all
-	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/depend
-	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=49 "Built target Transports.HTTP"
-.PHONY : CMakeFiles/Transports.HTTP.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Transports.HTTP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.HTTP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/Transports.HTTP.dir/rule
-
-# Convenience name for target.
-Transports.HTTP: CMakeFiles/Transports.HTTP.dir/rule
-
-.PHONY : Transports.HTTP
-
-# clean rule for target.
-CMakeFiles/Transports.HTTP.dir/clean:
-	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/clean
-.PHONY : CMakeFiles/Transports.HTTP.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/i18n_texts.dir
-
-# All Build rule for target.
-CMakeFiles/i18n_texts.dir/all:
-	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/depend
-	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target i18n_texts"
-.PHONY : CMakeFiles/i18n_texts.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/i18n_texts.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/i18n_texts.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/i18n_texts.dir/rule
-
-# Convenience name for target.
-i18n_texts: CMakeFiles/i18n_texts.dir/rule
-
-.PHONY : i18n_texts
-
-# clean rule for target.
-CMakeFiles/i18n_texts.dir/clean:
-	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/clean
-.PHONY : CMakeFiles/i18n_texts.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Power.OPCON.dir
-
-# All Build rule for target.
-CMakeFiles/Power.OPCON.dir/all: CMakeFiles/dune-core.dir/all
-	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/depend
-	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.OPCON"
-.PHONY : CMakeFiles/Power.OPCON.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Power.OPCON.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.OPCON.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/Power.OPCON.dir/rule
-
-# Convenience name for target.
-Power.OPCON: CMakeFiles/Power.OPCON.dir/rule
-
-.PHONY : Power.OPCON
-
-# clean rule for target.
-CMakeFiles/Power.OPCON.dir/clean:
-	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/clean
-.PHONY : CMakeFiles/Power.OPCON.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/dune-version.dir
@@ -4431,12 +4488,12 @@ CMakeFiles/NightlyConfigure.dir/clean:
 CMakeFiles/Monitors.Entities.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Monitors.Entities.dir/build.make CMakeFiles/Monitors.Entities.dir/depend
 	$(MAKE) -f CMakeFiles/Monitors.Entities.dir/build.make CMakeFiles/Monitors.Entities.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=15 "Built target Monitors.Entities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Monitors.Entities"
 .PHONY : CMakeFiles/Monitors.Entities.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Monitors.Entities.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Monitors.Entities.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Monitors.Entities.dir/rule
@@ -4512,12 +4569,12 @@ CMakeFiles/compass_calibration.dir/clean:
 CMakeFiles/Power.PCTLv2.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Power.PCTLv2.dir/build.make CMakeFiles/Power.PCTLv2.dir/depend
 	$(MAKE) -f CMakeFiles/Power.PCTLv2.dir/build.make CMakeFiles/Power.PCTLv2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.PCTLv2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=23 "Built target Power.PCTLv2"
 .PHONY : CMakeFiles/Power.PCTLv2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Power.PCTLv2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.PCTLv2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Power.PCTLv2.dir/rule
@@ -4539,12 +4596,12 @@ CMakeFiles/Power.PCTLv2.dir/clean:
 CMakeFiles/Control.ASV.HeadingAndSpeed.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Control.ASV.HeadingAndSpeed.dir/build.make CMakeFiles/Control.ASV.HeadingAndSpeed.dir/depend
 	$(MAKE) -f CMakeFiles/Control.ASV.HeadingAndSpeed.dir/build.make CMakeFiles/Control.ASV.HeadingAndSpeed.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Control.ASV.HeadingAndSpeed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=4 "Built target Control.ASV.HeadingAndSpeed"
 .PHONY : CMakeFiles/Control.ASV.HeadingAndSpeed.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Control.ASV.HeadingAndSpeed.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Control.ASV.HeadingAndSpeed.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Control.ASV.HeadingAndSpeed.dir/rule
@@ -4674,12 +4731,12 @@ CMakeFiles/Control.UAV.Ardupilot.dir/clean:
 CMakeFiles/Sensors.XchangeSV.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.XchangeSV.dir/build.make CMakeFiles/Sensors.XchangeSV.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.XchangeSV.dir/build.make CMakeFiles/Sensors.XchangeSV.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=34 "Built target Sensors.XchangeSV"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.XchangeSV"
 .PHONY : CMakeFiles/Sensors.XchangeSV.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.XchangeSV.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.XchangeSV.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.XchangeSV.dir/rule
@@ -4701,12 +4758,12 @@ CMakeFiles/Sensors.XchangeSV.dir/clean:
 CMakeFiles/Transports.DataStore.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.DataStore.dir/build.make CMakeFiles/Transports.DataStore.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.DataStore.dir/build.make CMakeFiles/Transports.DataStore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=47 "Built target Transports.DataStore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.DataStore"
 .PHONY : CMakeFiles/Transports.DataStore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.DataStore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.DataStore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.DataStore.dir/rule
@@ -5046,33 +5103,6 @@ CMakeFiles/Sensors.Microstrain3DMGX3.dir/clean:
 .PHONY : CMakeFiles/Sensors.Microstrain3DMGX3.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Simulators.IMU.dir
-
-# All Build rule for target.
-CMakeFiles/Simulators.IMU.dir/all: CMakeFiles/dune-core.dir/all
-	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/depend
-	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Simulators.IMU"
-.PHONY : CMakeFiles/Simulators.IMU.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Simulators.IMU.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Simulators.IMU.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
-.PHONY : CMakeFiles/Simulators.IMU.dir/rule
-
-# Convenience name for target.
-Simulators.IMU: CMakeFiles/Simulators.IMU.dir/rule
-
-.PHONY : Simulators.IMU
-
-# clean rule for target.
-CMakeFiles/Simulators.IMU.dir/clean:
-	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/clean
-.PHONY : CMakeFiles/Simulators.IMU.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/ExperimentalCoverage.dir
 
 # All Build rule for target.
@@ -5214,12 +5244,12 @@ CMakeFiles/Control.ASV.RemoteOperation.dir/clean:
 CMakeFiles/Sensors.DataStore.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.DataStore.dir/build.make CMakeFiles/Sensors.DataStore.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.DataStore.dir/build.make CMakeFiles/Sensors.DataStore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.DataStore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=25 "Built target Sensors.DataStore"
 .PHONY : CMakeFiles/Sensors.DataStore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.DataStore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.DataStore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.DataStore.dir/rule
@@ -5349,12 +5379,12 @@ CMakeFiles/filter_log.dir/clean:
 CMakeFiles/Power.CPMBv2.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Power.CPMBv2.dir/build.make CMakeFiles/Power.CPMBv2.dir/depend
 	$(MAKE) -f CMakeFiles/Power.CPMBv2.dir/build.make CMakeFiles/Power.CPMBv2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.CPMBv2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=21 "Built target Power.CPMBv2"
 .PHONY : CMakeFiles/Power.CPMBv2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Power.CPMBv2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.CPMBv2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Power.CPMBv2.dir/rule
@@ -5376,12 +5406,12 @@ CMakeFiles/Power.CPMBv2.dir/clean:
 CMakeFiles/Transports.Evologics.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Transports.Evologics.dir/build.make CMakeFiles/Transports.Evologics.dir/depend
 	$(MAKE) -f CMakeFiles/Transports.Evologics.dir/build.make CMakeFiles/Transports.Evologics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Transports.Evologics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=48 "Built target Transports.Evologics"
 .PHONY : CMakeFiles/Transports.Evologics.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Transports.Evologics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Transports.Evologics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Transports.Evologics.dir/rule
@@ -5511,12 +5541,12 @@ CMakeFiles/Supervisors.Vehicle.dir/clean:
 CMakeFiles/Sensors.OEMX.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.OEMX.dir/build.make CMakeFiles/Sensors.OEMX.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.OEMX.dir/build.make CMakeFiles/Sensors.OEMX.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=31 "Built target Sensors.OEMX"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.OEMX"
 .PHONY : CMakeFiles/Sensors.OEMX.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.OEMX.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.OEMX.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.OEMX.dir/rule
@@ -5727,12 +5757,12 @@ CMakeFiles/Autonomy.OnEvent.dir/clean:
 CMakeFiles/Sensors.XR620CTD.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.XR620CTD.dir/build.make CMakeFiles/Sensors.XR620CTD.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.XR620CTD.dir/build.make CMakeFiles/Sensors.XR620CTD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.XR620CTD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=34 "Built target Sensors.XR620CTD"
 .PHONY : CMakeFiles/Sensors.XR620CTD.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.XR620CTD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.XR620CTD.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.XR620CTD.dir/rule
@@ -5916,12 +5946,12 @@ CMakeFiles/Power.CPMBH.dir/clean:
 CMakeFiles/Sensors.SADC.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.SADC.dir/build.make CMakeFiles/Sensors.SADC.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.SADC.dir/build.make CMakeFiles/Sensors.SADC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.SADC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=32 "Built target Sensors.SADC"
 .PHONY : CMakeFiles/Sensors.SADC.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.SADC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.SADC.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.SADC.dir/rule
@@ -5943,12 +5973,12 @@ CMakeFiles/Sensors.SADC.dir/clean:
 CMakeFiles/Maneuver.FollowReference.UAV.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Maneuver.FollowReference.UAV.dir/build.make CMakeFiles/Maneuver.FollowReference.UAV.dir/depend
 	$(MAKE) -f CMakeFiles/Maneuver.FollowReference.UAV.dir/build.make CMakeFiles/Maneuver.FollowReference.UAV.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=12 "Built target Maneuver.FollowReference.UAV"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Maneuver.FollowReference.UAV"
 .PHONY : CMakeFiles/Maneuver.FollowReference.UAV.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Maneuver.FollowReference.UAV.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Maneuver.FollowReference.UAV.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Maneuver.FollowReference.UAV.dir/rule
@@ -5970,12 +6000,12 @@ CMakeFiles/Maneuver.FollowReference.UAV.dir/clean:
 CMakeFiles/Power.DOAMv1.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Power.DOAMv1.dir/build.make CMakeFiles/Power.DOAMv1.dir/depend
 	$(MAKE) -f CMakeFiles/Power.DOAMv1.dir/build.make CMakeFiles/Power.DOAMv1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=21 "Built target Power.DOAMv1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.DOAMv1"
 .PHONY : CMakeFiles/Power.DOAMv1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Power.DOAMv1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.DOAMv1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Power.DOAMv1.dir/rule
@@ -6078,12 +6108,12 @@ CMakeFiles/Power.DOAMv2.dir/clean:
 CMakeFiles/Power.LUEMB.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Power.LUEMB.dir/build.make CMakeFiles/Power.LUEMB.dir/depend
 	$(MAKE) -f CMakeFiles/Power.LUEMB.dir/build.make CMakeFiles/Power.LUEMB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.LUEMB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=22 "Built target Power.LUEMB"
 .PHONY : CMakeFiles/Power.LUEMB.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Power.LUEMB.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.LUEMB.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Power.LUEMB.dir/rule
@@ -6132,12 +6162,12 @@ CMakeFiles/ContinuousMemCheck.dir/clean:
 CMakeFiles/Power.MCBv2.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Power.MCBv2.dir/build.make CMakeFiles/Power.MCBv2.dir/depend
 	$(MAKE) -f CMakeFiles/Power.MCBv2.dir/build.make CMakeFiles/Power.MCBv2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=22 "Built target Power.MCBv2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.MCBv2"
 .PHONY : CMakeFiles/Power.MCBv2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Power.MCBv2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.MCBv2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Power.MCBv2.dir/rule
@@ -6186,12 +6216,12 @@ CMakeFiles/dune-activate.dir/clean:
 CMakeFiles/Power.PSIMAR.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Power.PSIMAR.dir/build.make CMakeFiles/Power.PSIMAR.dir/depend
 	$(MAKE) -f CMakeFiles/Power.PSIMAR.dir/build.make CMakeFiles/Power.PSIMAR.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=23 "Built target Power.PSIMAR"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Power.PSIMAR"
 .PHONY : CMakeFiles/Power.PSIMAR.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Power.PSIMAR.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Power.PSIMAR.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Power.PSIMAR.dir/rule
@@ -6213,12 +6243,12 @@ CMakeFiles/Power.PSIMAR.dir/clean:
 CMakeFiles/Sensors.ThermalZone.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.ThermalZone.dir/build.make CMakeFiles/Sensors.ThermalZone.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.ThermalZone.dir/build.make CMakeFiles/Sensors.ThermalZone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=33 "Built target Sensors.ThermalZone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.ThermalZone"
 .PHONY : CMakeFiles/Sensors.ThermalZone.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.ThermalZone.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.ThermalZone.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.ThermalZone.dir/rule
@@ -6240,12 +6270,12 @@ CMakeFiles/Sensors.ThermalZone.dir/clean:
 CMakeFiles/Navigation.General.LBL.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Navigation.General.LBL.dir/build.make CMakeFiles/Navigation.General.LBL.dir/depend
 	$(MAKE) -f CMakeFiles/Navigation.General.LBL.dir/build.make CMakeFiles/Navigation.General.LBL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Navigation.General.LBL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=18 "Built target Navigation.General.LBL"
 .PHONY : CMakeFiles/Navigation.General.LBL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Navigation.General.LBL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Navigation.General.LBL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Navigation.General.LBL.dir/rule
@@ -6348,12 +6378,12 @@ CMakeFiles/Control.AUV.Diving.dir/clean:
 CMakeFiles/Sensors.GPS.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.GPS.dir/build.make CMakeFiles/Sensors.GPS.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.GPS.dir/build.make CMakeFiles/Sensors.GPS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.GPS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=26 "Built target Sensors.GPS"
 .PHONY : CMakeFiles/Sensors.GPS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.GPS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.GPS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.GPS.dir/rule
@@ -6375,12 +6405,12 @@ CMakeFiles/Sensors.GPS.dir/clean:
 CMakeFiles/Sensors.Genesys.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.Genesys.dir/build.make CMakeFiles/Sensors.Genesys.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.Genesys.dir/build.make CMakeFiles/Sensors.Genesys.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=26 "Built target Sensors.Genesys"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.Genesys"
 .PHONY : CMakeFiles/Sensors.Genesys.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.Genesys.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.Genesys.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.Genesys.dir/rule
@@ -6402,12 +6432,12 @@ CMakeFiles/Sensors.Genesys.dir/clean:
 CMakeFiles/Sensors.SCH311X.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.SCH311X.dir/build.make CMakeFiles/Sensors.SCH311X.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.SCH311X.dir/build.make CMakeFiles/Sensors.SCH311X.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=32 "Built target Sensors.SCH311X"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.SCH311X"
 .PHONY : CMakeFiles/Sensors.SCH311X.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.SCH311X.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.SCH311X.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.SCH311X.dir/rule
@@ -6429,12 +6459,12 @@ CMakeFiles/Sensors.SCH311X.dir/clean:
 CMakeFiles/Vision.Lumenera.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Vision.Lumenera.dir/build.make CMakeFiles/Vision.Lumenera.dir/depend
 	$(MAKE) -f CMakeFiles/Vision.Lumenera.dir/build.make CMakeFiles/Vision.Lumenera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Vision.Lumenera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=57 "Built target Vision.Lumenera"
 .PHONY : CMakeFiles/Vision.Lumenera.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Vision.Lumenera.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Vision.Lumenera.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Vision.Lumenera.dir/rule
@@ -6645,12 +6675,12 @@ CMakeFiles/Sensors.Imagenex837B.dir/clean:
 CMakeFiles/Navigation.General.ROV.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Navigation.General.ROV.dir/build.make CMakeFiles/Navigation.General.ROV.dir/depend
 	$(MAKE) -f CMakeFiles/Navigation.General.ROV.dir/build.make CMakeFiles/Navigation.General.ROV.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=18 "Built target Navigation.General.ROV"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Navigation.General.ROV"
 .PHONY : CMakeFiles/Navigation.General.ROV.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Navigation.General.ROV.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Navigation.General.ROV.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Navigation.General.ROV.dir/rule
@@ -6753,12 +6783,12 @@ CMakeFiles/dune-core.dir/clean:
 CMakeFiles/Navigation.AUV.Ranger.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Navigation.AUV.Ranger.dir/build.make CMakeFiles/Navigation.AUV.Ranger.dir/depend
 	$(MAKE) -f CMakeFiles/Navigation.AUV.Ranger.dir/build.make CMakeFiles/Navigation.AUV.Ranger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=17 "Built target Navigation.AUV.Ranger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Navigation.AUV.Ranger"
 .PHONY : CMakeFiles/Navigation.AUV.Ranger.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Navigation.AUV.Ranger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Navigation.AUV.Ranger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Navigation.AUV.Ranger.dir/rule
@@ -6834,12 +6864,12 @@ CMakeFiles/Sensors.OS4000.dir/clean:
 CMakeFiles/Control.Path.PurePursuit.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Control.Path.PurePursuit.dir/build.make CMakeFiles/Control.Path.PurePursuit.dir/depend
 	$(MAKE) -f CMakeFiles/Control.Path.PurePursuit.dir/build.make CMakeFiles/Control.Path.PurePursuit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=8 "Built target Control.Path.PurePursuit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Control.Path.PurePursuit"
 .PHONY : CMakeFiles/Control.Path.PurePursuit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Control.Path.PurePursuit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Control.Path.PurePursuit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Control.Path.PurePursuit.dir/rule
@@ -6861,12 +6891,12 @@ CMakeFiles/Control.Path.PurePursuit.dir/clean:
 CMakeFiles/Sensors.SonTekArgonaut.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.SonTekArgonaut.dir/build.make CMakeFiles/Sensors.SonTekArgonaut.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.SonTekArgonaut.dir/build.make CMakeFiles/Sensors.SonTekArgonaut.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.SonTekArgonaut"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=33 "Built target Sensors.SonTekArgonaut"
 .PHONY : CMakeFiles/Sensors.SonTekArgonaut.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.SonTekArgonaut.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.SonTekArgonaut.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.SonTekArgonaut.dir/rule
@@ -7023,12 +7053,12 @@ CMakeFiles/Sensors.CyclopsC7.dir/clean:
 CMakeFiles/Sensors.Edgetech2205.dir/all: CMakeFiles/dune-core.dir/all
 	$(MAKE) -f CMakeFiles/Sensors.Edgetech2205.dir/build.make CMakeFiles/Sensors.Edgetech2205.dir/depend
 	$(MAKE) -f CMakeFiles/Sensors.Edgetech2205.dir/build.make CMakeFiles/Sensors.Edgetech2205.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num=25 "Built target Sensors.Edgetech2205"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sif/lststools/dune/build/CMakeFiles --progress-num= "Built target Sensors.Edgetech2205"
 .PHONY : CMakeFiles/Sensors.Edgetech2205.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sensors.Edgetech2205.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sensors.Edgetech2205.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sif/lststools/dune/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sensors.Edgetech2205.dir/rule

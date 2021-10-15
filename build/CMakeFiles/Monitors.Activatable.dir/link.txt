@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMonitors.Activatable.a  CMakeFiles/Monitors.Activatable.dir/src/Monitors/Activatable/Task.cpp.o
+/usr/bin/ranlib libMonitors.Activatable.a

@@ -1,6 +1,0 @@
-[2021/10/15 11:04:49] - MSG [Plan.DB] >> set plan (cmd-lauv-xplore-1) -- OK (new entry)
-[2021/10/15 11:04:49] - WRN [Supervisors.Vehicle] >> now in 'MANEUVERING' mode
-[2021/10/15 11:04:49] - MSG [Control.Path.VectorField] >> path (lat/lon): 41.18500 -8.70620 to 41.18479 -8.70593
-[2021/10/15 11:05:19] - MSG [Plan.Engine] >> plan completed
-[2021/10/15 11:05:19] - MSG [Transports.Logging] >> log stopped '20211015/110449_cmd-lauv-xplore-1'
-[2021/10/15 11:05:19] - MSG [Transports.Logging] >> log started '20211015/110519'

@@ -35,7 +35,7 @@ namespace DUNE
   const char*
   getFullVersion(void)
   {
-    return DUNE_VERSION_STR " (unknown,unknown)";
+    return DUNE_VERSION_STR " (master,72175e3,dirty)";
   }
 
   const char*

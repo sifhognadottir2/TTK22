@@ -140,6 +140,7 @@ dune: libManeuver.Multiplexer.a
 dune: libManeuver.RowsCoverage.a
 dune: libManeuver.Teleoperation.a
 dune: libManeuver.VehicleFormation.SMC.a
+dune: libMonitors.Activatable.a
 dune: libMonitors.Clock.a
 dune: libMonitors.Collisions.a
 dune: libMonitors.Emergency.a

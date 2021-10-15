@@ -593,19 +593,6 @@ Vision.DFK51BG02H/fast:
 .PHONY : Vision.DFK51BG02H/fast
 
 #=============================================================================
-# Target rules for targets named UserInterfaces.MantaPanel
-
-# Build rule for target.
-UserInterfaces.MantaPanel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 UserInterfaces.MantaPanel
-.PHONY : UserInterfaces.MantaPanel
-
-# fast build rule for target.
-UserInterfaces.MantaPanel/fast:
-	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/build
-.PHONY : UserInterfaces.MantaPanel/fast
-
-#=============================================================================
 # Target rules for targets named UserInterfaces.Buttons
 
 # Build rule for target.
@@ -1139,6 +1126,19 @@ Simulators.Iridium/fast:
 .PHONY : Simulators.Iridium/fast
 
 #=============================================================================
+# Target rules for targets named Simulators.IMU
+
+# Build rule for target.
+Simulators.IMU: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Simulators.IMU
+.PHONY : Simulators.IMU
+
+# fast build rule for target.
+Simulators.IMU/fast:
+	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/build
+.PHONY : Simulators.IMU/fast
+
+#=============================================================================
 # Target rules for targets named Monitors.FuelLevel
 
 # Build rule for target.
@@ -1191,6 +1191,45 @@ Sensors.MiniSVS/fast:
 .PHONY : Sensors.MiniSVS/fast
 
 #=============================================================================
+# Target rules for targets named UserInterfaces.MantaPanel
+
+# Build rule for target.
+UserInterfaces.MantaPanel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UserInterfaces.MantaPanel
+.PHONY : UserInterfaces.MantaPanel
+
+# fast build rule for target.
+UserInterfaces.MantaPanel/fast:
+	$(MAKE) -f CMakeFiles/UserInterfaces.MantaPanel.dir/build.make CMakeFiles/UserInterfaces.MantaPanel.dir/build
+.PHONY : UserInterfaces.MantaPanel/fast
+
+#=============================================================================
+# Target rules for targets named Monitors.Activatable
+
+# Build rule for target.
+Monitors.Activatable: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Monitors.Activatable
+.PHONY : Monitors.Activatable
+
+# fast build rule for target.
+Monitors.Activatable/fast:
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/build
+.PHONY : Monitors.Activatable/fast
+
+#=============================================================================
+# Target rules for targets named Maneuver.CompassCalibration
+
+# Build rule for target.
+Maneuver.CompassCalibration: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Maneuver.CompassCalibration
+.PHONY : Maneuver.CompassCalibration
+
+# fast build rule for target.
+Maneuver.CompassCalibration/fast:
+	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/build
+.PHONY : Maneuver.CompassCalibration/fast
+
+#=============================================================================
 # Target rules for targets named imc_download
 
 # Build rule for target.
@@ -1228,6 +1267,58 @@ Maneuver.FollowSystem: cmake_check_build_system
 Maneuver.FollowSystem/fast:
 	$(MAKE) -f CMakeFiles/Maneuver.FollowSystem.dir/build.make CMakeFiles/Maneuver.FollowSystem.dir/build
 .PHONY : Maneuver.FollowSystem/fast
+
+#=============================================================================
+# Target rules for targets named UserInterfaces.LCD
+
+# Build rule for target.
+UserInterfaces.LCD: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UserInterfaces.LCD
+.PHONY : UserInterfaces.LCD
+
+# fast build rule for target.
+UserInterfaces.LCD/fast:
+	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/build
+.PHONY : UserInterfaces.LCD/fast
+
+#=============================================================================
+# Target rules for targets named Transports.HTTP
+
+# Build rule for target.
+Transports.HTTP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Transports.HTTP
+.PHONY : Transports.HTTP
+
+# fast build rule for target.
+Transports.HTTP/fast:
+	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/build
+.PHONY : Transports.HTTP/fast
+
+#=============================================================================
+# Target rules for targets named Power.OPCON
+
+# Build rule for target.
+Power.OPCON: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Power.OPCON
+.PHONY : Power.OPCON
+
+# fast build rule for target.
+Power.OPCON/fast:
+	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/build
+.PHONY : Power.OPCON/fast
+
+#=============================================================================
+# Target rules for targets named i18n_texts
+
+# Build rule for target.
+i18n_texts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 i18n_texts
+.PHONY : i18n_texts
+
+# fast build rule for target.
+i18n_texts/fast:
+	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/build
+.PHONY : i18n_texts/fast
 
 #=============================================================================
 # Target rules for targets named Simulators.UAV
@@ -1709,71 +1800,6 @@ Sensors.MetrecX: cmake_check_build_system
 Sensors.MetrecX/fast:
 	$(MAKE) -f CMakeFiles/Sensors.MetrecX.dir/build.make CMakeFiles/Sensors.MetrecX.dir/build
 .PHONY : Sensors.MetrecX/fast
-
-#=============================================================================
-# Target rules for targets named Maneuver.CompassCalibration
-
-# Build rule for target.
-Maneuver.CompassCalibration: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Maneuver.CompassCalibration
-.PHONY : Maneuver.CompassCalibration
-
-# fast build rule for target.
-Maneuver.CompassCalibration/fast:
-	$(MAKE) -f CMakeFiles/Maneuver.CompassCalibration.dir/build.make CMakeFiles/Maneuver.CompassCalibration.dir/build
-.PHONY : Maneuver.CompassCalibration/fast
-
-#=============================================================================
-# Target rules for targets named UserInterfaces.LCD
-
-# Build rule for target.
-UserInterfaces.LCD: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 UserInterfaces.LCD
-.PHONY : UserInterfaces.LCD
-
-# fast build rule for target.
-UserInterfaces.LCD/fast:
-	$(MAKE) -f CMakeFiles/UserInterfaces.LCD.dir/build.make CMakeFiles/UserInterfaces.LCD.dir/build
-.PHONY : UserInterfaces.LCD/fast
-
-#=============================================================================
-# Target rules for targets named Transports.HTTP
-
-# Build rule for target.
-Transports.HTTP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Transports.HTTP
-.PHONY : Transports.HTTP
-
-# fast build rule for target.
-Transports.HTTP/fast:
-	$(MAKE) -f CMakeFiles/Transports.HTTP.dir/build.make CMakeFiles/Transports.HTTP.dir/build
-.PHONY : Transports.HTTP/fast
-
-#=============================================================================
-# Target rules for targets named i18n_texts
-
-# Build rule for target.
-i18n_texts: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 i18n_texts
-.PHONY : i18n_texts
-
-# fast build rule for target.
-i18n_texts/fast:
-	$(MAKE) -f CMakeFiles/i18n_texts.dir/build.make CMakeFiles/i18n_texts.dir/build
-.PHONY : i18n_texts/fast
-
-#=============================================================================
-# Target rules for targets named Power.OPCON
-
-# Build rule for target.
-Power.OPCON: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Power.OPCON
-.PHONY : Power.OPCON
-
-# fast build rule for target.
-Power.OPCON/fast:
-	$(MAKE) -f CMakeFiles/Power.OPCON.dir/build.make CMakeFiles/Power.OPCON.dir/build
-.PHONY : Power.OPCON/fast
 
 #=============================================================================
 # Target rules for targets named dune-version
@@ -2294,19 +2320,6 @@ Sensors.Microstrain3DMGX3: cmake_check_build_system
 Sensors.Microstrain3DMGX3/fast:
 	$(MAKE) -f CMakeFiles/Sensors.Microstrain3DMGX3.dir/build.make CMakeFiles/Sensors.Microstrain3DMGX3.dir/build
 .PHONY : Sensors.Microstrain3DMGX3/fast
-
-#=============================================================================
-# Target rules for targets named Simulators.IMU
-
-# Build rule for target.
-Simulators.IMU: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Simulators.IMU
-.PHONY : Simulators.IMU
-
-# fast build rule for target.
-Simulators.IMU/fast:
-	$(MAKE) -f CMakeFiles/Simulators.IMU.dir/build.make CMakeFiles/Simulators.IMU.dir/build
-.PHONY : Simulators.IMU/fast
 
 #=============================================================================
 # Target rules for targets named ExperimentalCoverage
@@ -9182,6 +9195,33 @@ src/Maneuver/VehicleFormation/SMC/Task.cpp.s:
 	$(MAKE) -f CMakeFiles/Maneuver.VehicleFormation.SMC.dir/build.make CMakeFiles/Maneuver.VehicleFormation.SMC.dir/src/Maneuver/VehicleFormation/SMC/Task.cpp.s
 .PHONY : src/Maneuver/VehicleFormation/SMC/Task.cpp.s
 
+src/Monitors/Activatable/Task.o: src/Monitors/Activatable/Task.cpp.o
+
+.PHONY : src/Monitors/Activatable/Task.o
+
+# target to build an object file
+src/Monitors/Activatable/Task.cpp.o:
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/src/Monitors/Activatable/Task.cpp.o
+.PHONY : src/Monitors/Activatable/Task.cpp.o
+
+src/Monitors/Activatable/Task.i: src/Monitors/Activatable/Task.cpp.i
+
+.PHONY : src/Monitors/Activatable/Task.i
+
+# target to preprocess a source file
+src/Monitors/Activatable/Task.cpp.i:
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/src/Monitors/Activatable/Task.cpp.i
+.PHONY : src/Monitors/Activatable/Task.cpp.i
+
+src/Monitors/Activatable/Task.s: src/Monitors/Activatable/Task.cpp.s
+
+.PHONY : src/Monitors/Activatable/Task.s
+
+# target to generate assembly for a file
+src/Monitors/Activatable/Task.cpp.s:
+	$(MAKE) -f CMakeFiles/Monitors.Activatable.dir/build.make CMakeFiles/Monitors.Activatable.dir/src/Monitors/Activatable/Task.cpp.s
+.PHONY : src/Monitors/Activatable/Task.cpp.s
+
 src/Monitors/Clock/Task.o: src/Monitors/Clock/Task.cpp.o
 
 .PHONY : src/Monitors/Clock/Task.o
@@ -15432,7 +15472,6 @@ help:
 	@echo "... Vision.PhotoTrigger"
 	@echo "... ExperimentalStart"
 	@echo "... Vision.DFK51BG02H"
-	@echo "... UserInterfaces.MantaPanel"
 	@echo "... UserInterfaces.Buttons"
 	@echo "... Transports.UDP"
 	@echo "... Transports.TCPOnDemand"
@@ -15474,13 +15513,21 @@ help:
 	@echo "... Transports.UAN"
 	@echo "... Simulators.LBL"
 	@echo "... Simulators.Iridium"
+	@echo "... Simulators.IMU"
 	@echo "... Monitors.FuelLevel"
 	@echo "... Actuators.SCRTv4"
 	@echo "... Monitors.Collisions"
 	@echo "... Sensors.MiniSVS"
+	@echo "... UserInterfaces.MantaPanel"
+	@echo "... Monitors.Activatable"
+	@echo "... Maneuver.CompassCalibration"
 	@echo "... imc_download"
 	@echo "... Plan.Engine"
 	@echo "... Maneuver.FollowSystem"
+	@echo "... UserInterfaces.LCD"
+	@echo "... Transports.HTTP"
+	@echo "... Power.OPCON"
+	@echo "... i18n_texts"
 	@echo "... Simulators.UAV"
 	@echo "... Maneuver.Multiplexer"
 	@echo "... Maneuver.FollowReference.AUV"
@@ -15520,11 +15567,6 @@ help:
 	@echo "... Monitors.Clock"
 	@echo "... Actuators.SingleSIMCT01"
 	@echo "... Sensors.MetrecX"
-	@echo "... Maneuver.CompassCalibration"
-	@echo "... UserInterfaces.LCD"
-	@echo "... Transports.HTTP"
-	@echo "... i18n_texts"
-	@echo "... Power.OPCON"
 	@echo "... dune-version"
 	@echo "... Actuators.MCD4R"
 	@echo "... ContinuousStart"
@@ -15567,7 +15609,6 @@ help:
 	@echo "... Maneuver.CoverArea"
 	@echo "... Nightly"
 	@echo "... Sensors.Microstrain3DMGX3"
-	@echo "... Simulators.IMU"
 	@echo "... ExperimentalCoverage"
 	@echo "... Supervisors.Power"
 	@echo "... Actuators.SIMCT01"
@@ -16300,6 +16341,9 @@ help:
 	@echo "... src/Maneuver/VehicleFormation/SMC/Task.o"
 	@echo "... src/Maneuver/VehicleFormation/SMC/Task.i"
 	@echo "... src/Maneuver/VehicleFormation/SMC/Task.s"
+	@echo "... src/Monitors/Activatable/Task.o"
+	@echo "... src/Monitors/Activatable/Task.i"
+	@echo "... src/Monitors/Activatable/Task.s"
 	@echo "... src/Monitors/Clock/Task.o"
 	@echo "... src/Monitors/Clock/Task.i"
 	@echo "... src/Monitors/Clock/Task.s"

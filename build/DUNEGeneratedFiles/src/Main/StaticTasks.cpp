@@ -81,6 +81,7 @@ DUNE::Tasks::Task* createManeuverMultiplexerTask(const std::string&, DUNE::Tasks
 DUNE::Tasks::Task* createManeuverRowsCoverageTask(const std::string&, DUNE::Tasks::Context&);
 DUNE::Tasks::Task* createManeuverTeleoperationTask(const std::string&, DUNE::Tasks::Context&);
 DUNE::Tasks::Task* createManeuverVehicleFormationSMCTask(const std::string&, DUNE::Tasks::Context&);
+DUNE::Tasks::Task* createMonitorsActivatableTask(const std::string&, DUNE::Tasks::Context&);
 DUNE::Tasks::Task* createMonitorsClockTask(const std::string&, DUNE::Tasks::Context&);
 DUNE::Tasks::Task* createMonitorsCollisionsTask(const std::string&, DUNE::Tasks::Context&);
 DUNE::Tasks::Task* createMonitorsEmergencyTask(const std::string&, DUNE::Tasks::Context&);
@@ -262,6 +263,7 @@ DUNE::Tasks::Factory::registerStaticTask("Maneuver.Multiplexer", createManeuverM
 DUNE::Tasks::Factory::registerStaticTask("Maneuver.RowsCoverage", createManeuverRowsCoverageTask);
 DUNE::Tasks::Factory::registerStaticTask("Maneuver.Teleoperation", createManeuverTeleoperationTask);
 DUNE::Tasks::Factory::registerStaticTask("Maneuver.VehicleFormation.SMC", createManeuverVehicleFormationSMCTask);
+DUNE::Tasks::Factory::registerStaticTask("Monitors.Activatable", createMonitorsActivatableTask);
 DUNE::Tasks::Factory::registerStaticTask("Monitors.Clock", createMonitorsClockTask);
 DUNE::Tasks::Factory::registerStaticTask("Monitors.Collisions", createMonitorsCollisionsTask);
 DUNE::Tasks::Factory::registerStaticTask("Monitors.Emergency", createMonitorsEmergencyTask);

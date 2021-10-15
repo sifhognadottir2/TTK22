@@ -478,6 +478,9 @@ Maneuver.Teleoperation_LIB_DEPENDS:STATIC=general;dune-core;general;rt;general;p
 Maneuver.VehicleFormation.SMC_LIB_DEPENDS:STATIC=general;dune-core;general;rt;general;pthread;general;m;general;nsl;general;dl;
 
 //Dependencies for the target
+Monitors.Activatable_LIB_DEPENDS:STATIC=general;dune-core;general;rt;general;pthread;general;m;general;nsl;general;dl;
+
+//Dependencies for the target
 Monitors.Clock_LIB_DEPENDS:STATIC=general;dune-core;general;rt;general;pthread;general;m;general;nsl;general;dl;
 
 //Dependencies for the target
